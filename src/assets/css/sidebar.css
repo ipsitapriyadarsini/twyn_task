@@ -1,14 +1,52 @@
-.sidebar-main-container{
-    max-width: 6rem;
+.sidebar-main-container {
+    max-width: 3.5rem;
     background: #BC4772;
     border-radius: 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.hamburgur {
+    max-width: 1.5rem;
+    margin-top: 1rem;
+    background: white;
+    color: #BC4772;
+    border-radius: 5px;
+    padding: .2rem .3rem 0 .3rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
 ul {
     list-style: none;
-   margin: 0;
-   padding:.4rem 0; 
-   text-align: center;
+    margin: 0;
+    padding: .4rem 0;
+   
 }
-.list_item{
-   padding: .6rem 0; 
+
+.list_item {
+    font-size: 1.5rem;
+    padding: .6rem 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.active_menu {
+    width: 4rem;
+    padding-top:.3rem;
+    margin-left: 1.7rem;
+    background: #4D1354;
+    border-radius: .5rem;
+}
+.expanded_sidebar{
+    max-width: 10rem;
+    background: #BC4772; 
+    border-radius: 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
