@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { listItems } from '../../arritems'
 import "../../assets/css/sidebar.css"
-import { BsList, BsChevronRight } from "react-icons/bs";
+import { BsList, BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
 
 const Sidebar = () => {
@@ -10,14 +10,14 @@ const Sidebar = () => {
 
   return (
     <div className={` ${expandBar ? "expanded_sidebar" : "sidebar-main-container"} `}>
-      <div className={` ${expandBar ? "expanded_sidebar" : ""} hamburgur`}
+      <div className={`hamburgur ${expandBar && "expanded_burger"}`}
         onClick={
           () => setExpandBar(!expandBar)
         }>
-        {expandBar ? <BsChevronRight /> : <BsList />}
+        {expandBar ? <BsChevronLeft /> : <BsList />}
 
       </div>
-      <ul>
+      <ul className={expandBar && `list_menu`}>
         {listItems.map((item, index) => (
           <li key={index}
             className="list_item"
@@ -25,7 +25,10 @@ const Sidebar = () => {
               setActive(index)
             }}>
             {active === index ?
-              <div className='active_menu'>{item.icon} <BsChevronRight /></div>
+              <div className={`active_menu ${expandBar && "fixwidth"}`}>
+                {expandBar && <span className='list__name'>{item.listName}</span>}
+                {item.icon} <BsChevronRight />
+              </div>
               : item.icon}
           </li>
         ))}
