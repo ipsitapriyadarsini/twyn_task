@@ -27,12 +27,6 @@ ul {
 
 }
 
-.list_menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
 .list_item {
     font-size: 1.5rem;
     padding: .6rem 0;
@@ -40,15 +34,20 @@ ul {
     text-align: center;
 }
 
-.active_menu {
-
+.list_menu {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 2rem;
+}
+
+.active_menu {
+    display: flex;
+    gap: .5rem;
+    margin-left: 2rem;
     padding: .3rem;
-    margin-left: 1.7rem;
     background: #4D1354;
     border-radius: .5rem;
-
 }
 
 .expanded_sidebar {
@@ -68,10 +67,12 @@ ul {
 .list__name {
     width: 14rem;
     font-size: .7rem;
-    padding-top: .2rem;
+    padding-top: .8rem;
 }
 
 .fixwidth {
     width: 12rem;
-    margin-left: 2rem;
+    font-size: 2.5rem;
+    padding: 0;
+    margin-right: -3.5rem;
 }
