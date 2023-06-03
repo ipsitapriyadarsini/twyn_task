@@ -2,13 +2,36 @@
     position: absolute;
     top: 2rem;
     right: 5rem;
-    height:fit-content
+    height: fit-content
 }
 
 .switch--layouts {
+    font-size: .7rem;
     display: flex;
-    background: white;
     max-width: fit-content;
-    border: 1px solid black;
-    border-radius: 12px;
+    border: 1px solid #E8E8E8;
+    border-radius: 2.1rem;
 }
+
+.digital_twin {
+    margin-right: .4rem;
+    padding: .6rem;
+}
+
+.dashboard {
+    height: inherit;
+    border-radius: 2.1rem;
+    background: white;
+    padding: .6rem 1rem;
+}
+
+
+
+
+/* --------------Media query for mobile---------------- */
+@media  (max-width:768px){
+    /* .switch-screen-button{
+
+    } */
+}
+    

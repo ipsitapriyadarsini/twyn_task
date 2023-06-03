@@ -13,7 +13,6 @@ code {
 }
 .body-main-container{
   display: flex;
-  justify-content: space-between;
   margin: 2rem;
   max-width: 100%;
   min-height: 90vh;

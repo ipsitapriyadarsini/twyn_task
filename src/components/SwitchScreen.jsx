@@ -4,8 +4,8 @@ const SwitchScreen = () => {
     return (
         <div className='switch-screen-button'>
             <div className='switch--layouts'>
-                <div>Digital Twin</div>
-                <div>Dashboard</div>
+                <div className="digital_twin">Digital Twin</div>
+                <div className='dashboard'>Dashboard</div>
             </div>
         </div>
     )
