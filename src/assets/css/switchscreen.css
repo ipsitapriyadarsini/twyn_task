@@ -1,6 +1,6 @@
 .switch-screen-button {
     position: absolute;
-    top: 2rem;
+    top: 1.5rem;
     right: 5rem;
     height: fit-content
 }
@@ -22,6 +22,7 @@
     height: inherit;
     border-radius: 2.1rem;
     background: white;
+    color:#BC4772;
     padding: .6rem 1rem;
 }
 

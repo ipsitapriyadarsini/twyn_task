@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from "../components/sidebarComponent/Sidebar"
 import Dashboard from '../pages/Dashboard'
 import SwitchScreen from '../components/SwitchScreen'
+import EngergySystem from '../pages/EngergySystem'
 
 
 const Home = () => {
@@ -10,6 +11,8 @@ const Home = () => {
       <Sidebar />
       <SwitchScreen />
       {/* <Dashboard /> */}
+      <section className='left-margin'><EngergySystem /></section>
+
     </div>
   )
 }

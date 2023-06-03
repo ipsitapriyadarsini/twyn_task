@@ -8,34 +8,42 @@ import { BsLightningCharge, BsGraphUp, BsInfoCircle } from "react-icons/bs";
 export const listItems = [{
     id: 1,
     icon: <RiHome5Line />,
-    listName: "Dashboard"
+    listName: "Dashboard",
+    link: "dashboard"
 }, {
     id: 2,
     icon: <BsLightningCharge />,
-    listName: "Energy Monitoring System"
+    listName: "Energy Monitoring System",
+    link: "energy-monitoring"
 }, {
     id: 3,
     icon: <BsGraphUp />,
-    listName: "Condition Based Monitoring"
+    listName: "Condition Based Monitoring",
+    link: "condition-monitoring"
 }, {
     id: 4,
     icon: <MdOutlineCenterFocusStrong />,
-    listName: "Quality Control"
+    listName: "Quality Control",
+    link: "quality"
 }, {
     id: 5,
     icon: <BsInfoCircle />,
-    listName: "Predictive Maintenance"
+    listName: "Predictive Maintenance",
+    link: "maintainance"
 }, {
     id: 6,
     icon: <BiCube />,
-    listName: "Inventory Status"
+    listName: "Inventory Status",
+    link: "inventory"
 },
 {
     id: 7,
     icon: <RiGlobalLine />,
-    listName: "Traceability"
+    listName: "Traceability",
+    link: "traceability"
 }, {
     id: 8,
     icon: <CgSandClock />,
-    listName: "Defect Induction"
+    listName: "Defect Induction",
+    link: "defect-induction"
 },]
