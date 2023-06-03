@@ -1,0 +1,14 @@
+.switch-screen-button {
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+    height:fit-content
+}
+
+.switch--layouts {
+    display: flex;
+    background: white;
+    max-width: fit-content;
+    border: 1px solid black;
+    border-radius: 12px;
+}
