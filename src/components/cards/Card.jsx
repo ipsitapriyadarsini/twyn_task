@@ -15,9 +15,7 @@ export const MiniCard = ({ children }) => {
 
         <>
             <div className="mini-card display-items-center">
-
                 {children}
-
             </div>
 
         </>

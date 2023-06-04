@@ -11,6 +11,99 @@ import { FcFlashOn, FcChargeBattery, FcNfcSign } from 'react-icons/fc'
 import { FaPlug } from "react-icons/fa"
 
 
+const cardValue = [{
+    title: "Loading Unit",
+    image: Table1,
+    minicardData: [
+        {
+
+            icon: <BsThermometerHigh />,
+            dataValue: "53°C"
+        },
+        {
+
+            icon: <FcNfcSign />,
+            dataValue: "2.5°"
+        },
+        {
+
+            icon: <FcFlashOn />,
+            dataValue: "6 A"
+        },
+        {
+
+            icon: <FcChargeBattery />,
+            dataValue: "24 V"
+        },
+        {
+
+            icon: <FaPlug />,
+            dataValue: "150W"
+        },
+    ]
+}, {
+    title: "Filling Unit Motor",
+    image: Table2,
+    minicardData: [
+        {
+
+            icon: <BsThermometerHigh />,
+            dataValue: "53°C"
+        },
+        {
+
+            icon: <FcNfcSign />,
+            dataValue: "2.5°"
+        },
+        {
+
+            icon: <FcFlashOn />,
+            dataValue: "6 A"
+        },
+        {
+
+            icon: <FcChargeBattery />,
+            dataValue: "24 V"
+        },
+        {
+
+            icon: <FaPlug />,
+            dataValue: "150W"
+        },
+    ]
+}, {
+    title: "Dispatch Unit Motor",
+    image: Table3,
+    minicardData: [
+        {
+
+            icon: <BsThermometerHigh />,
+            dataValue: "53°C"
+        },
+        {
+
+            icon: <FcNfcSign />,
+            dataValue: "2.5°"
+        },
+        {
+
+            icon: <FcFlashOn />,
+            dataValue: "6 A"
+        },
+        {
+
+            icon: <FcChargeBattery />,
+            dataValue: "24 V"
+        },
+        {
+
+            icon: <FaPlug />,
+            dataValue: "150W"
+        },
+    ]
+}]
+
+
 const ConditionBasedMonitoring = () => {
     return (
         <div className='body-main-container'>
@@ -20,63 +113,21 @@ const ConditionBasedMonitoring = () => {
                 <div>
                     <h1>Condition Based Monitoring</h1>
                 </div>
-                <ParentCard title="Loading Unit" >
-                    <div className='display-items-center'>
-                        <div className='margin_left'>
-                            <img src={Table1} alt="" />
+                {cardValue.map((item, i) => (
+
+                    <ParentCard title={item.title} key={i}>
+                        <div className='display-items-center'>
+                            <div className='margin_left'>
+                                <img className="image_size" src={item.image} alt={item.title} />
+                            </div>
+                            {item.minicardData.map((val, idx) => (
+                                <MiniCard key={idx}>
+                                    <div className='icon_box'>{val.icon}</div>
+                                    <div className="font_size">{val.dataValue}</div>
+                                </MiniCard>))}
                         </div>
-                        <MiniCard>
-                            <div className='icon_box'><BsThermometerHigh /></div>
-                            <div>53°C</div>
-                        </MiniCard>
-                        <MiniCard><div className='icon_box'><FcNfcSign /></div>
-                            <div>53°C</div></MiniCard>
-                        <MiniCard><div className='icon_box'><FcFlashOn /></div>
-                            <div>53°C</div></MiniCard>
-                        <MiniCard><div className='icon_box'><FcChargeBattery /></div>
-                            <div>53°C</div></MiniCard>
-                        <MiniCard><div className='icon_box'><FaPlug /></div>
-                            <div>53°C</div></MiniCard>
-                    </div>
-                </ParentCard>
-                <ParentCard title="Filling Unit">
-                    <div className='display-items-center'>
-                        <div className='margin_left'>
-                            <img src={Table2} alt="" />
-                        </div>
-                        <MiniCard>
-                            <div className='icon_box'><BsThermometerHigh /></div>
-                            <div>53°C</div>
-                        </MiniCard>
-                        <MiniCard><div className='icon_box'><FcNfcSign /></div>
-                            <div>53°C</div></MiniCard>
-                        <MiniCard><div className='icon_box'><FcFlashOn /></div>
-                            <div>53°C</div></MiniCard>
-                        <MiniCard><div className='icon_box'><FcChargeBattery /></div>
-                            <div>53°C</div></MiniCard>
-                        <MiniCard><div className='icon_box'><FaPlug /></div>
-                            <div>53°C</div></MiniCard>
-                    </div>
-                </ParentCard>
-                <ParentCard title="Dispatch Unit">
-                    <div className='display-items-center'>
-                        <div className='margin_left'>
-                            <img src={Table3} alt="" />
-                        </div>
-                        <MiniCard>
-                            <div className='icon_box'><BsThermometerHigh /></div>
-                            <div>53°C</div>
-                        </MiniCard>
-                        <MiniCard><div className='icon_box'><FcNfcSign /></div>
-                            <div>53°C</div></MiniCard>
-                        <MiniCard><div className='icon_box'><FcFlashOn /></div>
-                            <div>53°C</div></MiniCard>
-                        <MiniCard><div className='icon_box'><FcChargeBattery /></div>
-                            <div>53°C</div></MiniCard>
-                        <MiniCard><div className='icon_box'><FaPlug /></div>
-                            <div>53°C</div></MiniCard>
-                    </div>
-                </ParentCard>
+                    </ParentCard>
+                ))}
             </section>
         </div>
     )
