@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { listItems } from '../../arritems'
 import "../../assets/css/sidebar.css"
 import { BsList, BsChevronRight, BsChevronLeft } from "react-icons/bs";
-import {  useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 
 
@@ -27,7 +27,7 @@ const Sidebar = () => {
         {expandBar ? <BsChevronLeft /> : <BsList />}
 
       </div>
-      {/* <SidebarContext.Provider value={}> */}
+
       <ul className={expandBar ? `list_menu` : undefined}>
         {listItems.map((item, index) => (
           <li key={index}
@@ -36,14 +36,8 @@ const Sidebar = () => {
               navigate("/" + item.link)
             }}>
 
-            {/* {expandBar &&
-              listItems.splice(active,1).forEach((val, i) =>
-                <span className='list__name' key={i}>{val.listName}</span>
-              )
-            } */}
-
-            <div className={`${active === item.link ? "active_menu" : "menu-item"} ${expandBar && "fixwidth"}`}>
-              {expandBar && <span className='list__name'>{item.listName}</span>}
+            <div className={`${active === item.link ? "active_menu" : "menu-item"} ${expandBar && active === item.link && "active-fixedwidth"}`}>
+              {expandBar && <span className={`list__name ${expandBar && active === item.link && "active-list-menu"}`}>{item.listName}</span>}
               {item.icon}
               {active === item.link && <BsChevronRight />}
 
@@ -52,7 +46,7 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
-      {/* </SidebarContext.Provider> */}
+
     </div>
   )
 }

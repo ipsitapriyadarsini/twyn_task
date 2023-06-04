@@ -1,7 +1,8 @@
 import React from 'react'
-import Card from '../components/cards/Card'
+import ParentCard from '../components/cards/ParentCard'
 import Sidebar from '../components/sidebarComponent/Sidebar'
 import SwitchScreen from '../components/SwitchScreen'
+import Card from "../components/cards/Card"
 
 const EngergySystem = () => {
     return (
@@ -13,11 +14,15 @@ const EngergySystem = () => {
                     <div>
                         <h1>Energy Monitoring System</h1>
                     </div>
-                    <Card title="Loading Unit" >
-                        <div>hello</div>
-                    </Card>
-                    <Card />
-                    <Card />
+                    <ParentCard title="Loading Unit" >
+                        <Card></Card>
+                    </ParentCard>
+                    <ParentCard title="Filling Unit">
+                        <Card></Card>
+                    </ParentCard>
+                    <ParentCard title="Dispatch Unit">
+                        <Card></Card>
+                    </ParentCard>
                 </section>
             </div>
         </>
