@@ -6,4 +6,4 @@ const Card = ({ childeren }) => {
     )
 }
 
-export default Card
+export default Card;
